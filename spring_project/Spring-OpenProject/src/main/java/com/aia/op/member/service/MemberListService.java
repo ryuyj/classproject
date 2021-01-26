@@ -13,12 +13,17 @@ import com.aia.op.member.domain.Member;
 import com.aia.op.member.domain.MemberListView;
 import com.aia.op.member.domain.SearchParam;
 
+import lombok.Setter;
+import lombok.extern.log4j.Log4j;
+
+@Log4j
 @Service
 public class MemberListService {
 
 	private MemberDao dao;
 
-	@Autowired
+	//@Autowired
+	@Setter(onMethod_ = {@Autowired}  )
 	private SqlSessionTemplate template;
 
 	public MemberListView getListView(SearchParam param) {

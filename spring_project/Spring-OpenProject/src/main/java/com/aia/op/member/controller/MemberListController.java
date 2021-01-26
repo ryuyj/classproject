@@ -9,10 +9,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.aia.op.member.domain.SearchParam;
 import com.aia.op.member.service.MemberListService;
 
+import lombok.AllArgsConstructor;
+import lombok.extern.log4j.Log4j;
+
 @Controller
+@Log4j
+@AllArgsConstructor
 public class MemberListController {
 
-	@Autowired
+	//@Autowired
 	private MemberListService listService;
 	
 	@RequestMapping("/member/list") // /member/list
@@ -21,6 +26,8 @@ public class MemberListController {
 			SearchParam param,
 			Model model 
 			) {
+		
+		log.info("list");
 		
 		System.out.println(param);
 		

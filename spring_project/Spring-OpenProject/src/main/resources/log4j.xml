@@ -43,6 +43,10 @@
 		<level value="info" />
 	</logger>
 
+	<logger name="jdbc.resulttable">
+		<level value="info" />
+	</logger>
+
 <!-- 	<logger name="jdbc.connection">
 		<level value="info" />
 	</logger> -->
